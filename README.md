@@ -36,7 +36,50 @@ print(json.dumps(h_result, indent=4))
 ```
 #### C++
 ```
-// To be added later...
+#include "Yolov8Inference.h"
+#include "HiExtract/HiExtract.h"
+
+int main() {
+    try{
+        // Path to Yolov5 Model in IR format
+        // Model folders is under the same directory of main.cpp file
+        string modelPath = "yolov8s_openvino_model/yolov8s.xml";
+
+        // Define input size
+        int imgsz = 640;
+
+        // Define devices (CPU | GPU) for inference
+        string device = "CPU";
+        
+        string imagePath = "E:/Code-Workspace/Other/HiExtract/assets/images/106903459-1624896118131-gettyimages-1324274760-pi-2189332.jpeg";
+        Mat frame = imread(imagePath);
+
+        ov::Core core;
+        cout << "Start compiling model" << endl;
+        auto model = compileModel(modelPath, core, device);
+
+        float scale = 0.0;
+        auto resizedImage = preprocessImage(frame, imgsz, &scale);
+        auto output = createInference(model, resizedImage);
+        auto detectionResults = postprocess(output, scale);
+
+        vector<string> base_objects = { "person" };
+        vector<Object> parentObjects = extractObjectHierarchy(base_objects, detectionResults, DetectionType::YOLO);
+
+        for (const auto& object : parentObjects) {
+            cout << "- Parent Object:" << object.className << endl;
+            vector<Object> children = object.children;
+            for (const auto& child : children) {
+                cout << "==> Child name: " << child.className << endl;
+            }
+        }
+    }
+    catch (Exception ex) {
+        cerr << ex.msg;
+    }
+
+    return 0;
+}
 ```
 
 #### Sample result
