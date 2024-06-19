@@ -3,8 +3,7 @@
 
 int main() {
     try{
-        // Path to Yolov5 Model in IR format
-        // Model folders is under the same directory of main.cpp file
+        // Path to YOlOv8s Model in IR format
         string modelPath = "yolov8s_openvino_model/yolov8s.xml";
 
         // Define input size
