@@ -1,7 +1,7 @@
 # HiExtract
 HiExtract: A simple and efficient technique for extracting object hierarchies based on object detection
 
-![figure-Page-5](https://github.com/saravit-soeng/HiExtract/assets/19525030/84f953c1-98b6-47dc-8bfb-6c098b5ab7ee)
+![figure-1-updated](https://github.com/saravit-soeng/HiExtract/assets/19525030/c11693b4-3574-4b0e-ae83-fe3956e3b317)
 
 
 ### Abstract
