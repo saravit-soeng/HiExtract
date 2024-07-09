@@ -84,4 +84,5 @@ int main() {
 The above sample code for c++ is inferenced on OpenVino runtime using YOLOv8s.
 
 #### Sample result
-![figure-Page-10](https://github.com/saravit-soeng/HiExtract/assets/19525030/6d2527bd-f262-4be2-9b0e-65d1cb32d287)
+
+![figure-2](https://github.com/saravit-soeng/HiExtract/assets/19525030/c51e0426-8471-48f7-be8d-f1c389689514)
