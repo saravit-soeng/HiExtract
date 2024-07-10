@@ -29,7 +29,7 @@ result = model.predict(source=source)[0]
 
 # Extract object hierarchy
 hi_extract = HiExtract(base_objects=['person'], detection_result=result)
-h_result = hi_extract.detect_object_hierarchy()
+h_result = hi_extract.extract_object_hierarchy()
 
 # Pretty print using json
 print(json.dumps(h_result, indent=4))
