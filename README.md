@@ -1,7 +1,7 @@
 # HiExtract
 HiExtract: A simple and efficient technique for extracting object hierarchies based on object detection
 
-![figure-Page-5](https://github.com/saravit-soeng/HiExtract/assets/19525030/84f953c1-98b6-47dc-8bfb-6c098b5ab7ee)
+![figure-1-updated](https://github.com/saravit-soeng/HiExtract/assets/19525030/c11693b4-3574-4b0e-ae83-fe3956e3b317)
 
 
 ### Abstract
@@ -29,7 +29,7 @@ result = model.predict(source=source)[0]
 
 # Extract object hierarchy
 hi_extract = HiExtract(base_objects=['person'], detection_result=result)
-h_result = hi_extract.detect_object_hierarchy()
+h_result = hi_extract.extract_object_hierarchy()
 
 # Pretty print using json
 print(json.dumps(h_result, indent=4))
@@ -84,4 +84,5 @@ int main() {
 The above sample code for c++ is inferenced on OpenVino runtime using YOLOv8s.
 
 #### Sample result
-![figure-Page-10](https://github.com/saravit-soeng/HiExtract/assets/19525030/6d2527bd-f262-4be2-9b0e-65d1cb32d287)
+
+![figure-2](https://github.com/saravit-soeng/HiExtract/assets/19525030/c51e0426-8471-48f7-be8d-f1c389689514)
