@@ -16,7 +16,7 @@ class HiExtract():
         self.dtype = dtype
     
     # Define function for detecting object hierarchy
-    def detect_object_hierarchy(self):
+    def extract_object_hierarchy(self):
         results = {}
         if self.dtype == DetectionType.YOLO:
             results = detect_oh_yolo(self.base_objects, self.detection_result)
